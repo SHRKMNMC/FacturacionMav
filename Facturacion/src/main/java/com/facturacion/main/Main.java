@@ -1,14 +1,12 @@
 package com.facturacion.main;
 
-import com.facturacion.gui.ClienteFrame;
-
+import com.facturacion.gui.MainFrame;
 import javax.swing.SwingUtilities;
 
 public class Main {
-
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            new ClienteFrame().setVisible(true);
+            new MainFrame().setVisible(true);
         });
     }
 }

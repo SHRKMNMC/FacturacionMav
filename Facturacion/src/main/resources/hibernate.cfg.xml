@@ -5,26 +5,25 @@
 <hibernate-configuration>
     <session-factory>
 
-        <property name="hibernate.connection.driver_class">
-            com.mysql.cj.jdbc.Driver
-        </property>
-
+        <!-- Driver y URL de conexión -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.connection.url">
             jdbc:mysql://localhost:3306/facturacion?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true
         </property>
-
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">Lagiacrus999</property>
 
-        <property name="hibernate.dialect">
-            org.hibernate.dialect.MySQL8Dialect
-        </property>
+        <!-- Dialecto de MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
 
+        <!-- Mostrar SQL en consola -->
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
 
+        <!-- Actualizar esquema automáticamente -->
         <property name="hibernate.hbm2ddl.auto">update</property>
 
+        <!-- Mapeo de clases -->
         <mapping class="com.facturacion.entity.Cliente"/>
 
     </session-factory>
